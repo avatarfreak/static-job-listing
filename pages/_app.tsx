@@ -1,8 +1,9 @@
+import Head from "next/head";
+import React from "react";
 import Layout from "@layout/index";
 import { JobProvider } from "context/JobProvider";
 import { AppProps } from "next/app";
-import Head from "next/head";
-import React from "react";
+
 import "tailwindcss/tailwind.css";
 import "../src/styles/index.scss";
 
