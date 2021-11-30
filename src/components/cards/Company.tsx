@@ -14,16 +14,16 @@ const Company: React.FC<Props> = ({ company, news, feature }) => {
       <div className="text-fs-500 font-bold text-center text-white w-full flex space-x-3">
         {/* --- Dislay new if truty */}
         {news && (
-          <h2 className="uppercase rounded-3xl bg-pri-clr-100 px-3 pt-2 pb-1">
+          <h1 className="uppercase rounded-3xl bg-pri-clr-100 px-3 pt-2 pb-1">
             New!
-          </h2>
+          </h1>
         )}
 
         {/* --- Dislay feature if true --- */}
         {feature && (
-          <h2 className="uppercase rounded-3xl bg-clr-130 px-3 pt-2 pb-1">
+          <h1 className="uppercase rounded-3xl bg-clr-130 px-3 pt-2 pb-1">
             Feature
-          </h2>
+          </h1>
         )}
       </div>
     </div>
