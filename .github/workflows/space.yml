@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /frontend-space-travel-tourism
+      NEXT_PUBLIC_BASE_PATH: /frontend-static-Job-listing
 
     strategy:
       matrix:
