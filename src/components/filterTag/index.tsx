@@ -1,6 +1,8 @@
 import { Action } from "context/constant";
 import { useJobSearch } from "hook/useJobSearch";
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const FilterTags = () => {
   const { tags, dispatch } = useJobSearch();
   return (
@@ -22,7 +24,7 @@ const FilterTags = () => {
                   }
                   className="bg-pri-clr-100 px-2 focus:bg-clr-130 lg:hover:bg-clr-130"
                 >
-                  <img src="/images/icon-remove.svg" alt="remove" />
+                  <img src={`${prefix}/images/icon-remove.svg`} alt="remove" />
                   <span className="sr-only">remove</span>
                 </button>
               </div>
