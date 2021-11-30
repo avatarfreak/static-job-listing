@@ -1,0 +1,34 @@
+:root {
+  --pri-clr-100: hsl(189, 29%, 50%);
+  --clr-100: hsl(180, 52%, 96%); //background
+  --clr-110: hsl(180, 31%, 95%); //Filter tablets
+  --clr-120: hsl(180, 8%, 52%);
+  --clr-130: hsl(180, 14%, 20%);
+
+  --ff-serif: "Spartan", sans-serif;
+
+  --fs-900: 0.875rem; // level bold letter-spacing: .60
+  --fs-800: 0.8125rem; // role
+  --fs-700: 0.8125rem; // duration medium
+  --fs-600: 0.8125rem; // tablet bold
+  --fs-500: 0.6875rem; // pill bold
+
+  --t-0: 0.57px; //  level and duration
+
+  @media (min-width: 48rem) {
+    --fs-900: 1rem; // level bold letter-spacing:1.16px
+    --fs-800: 0.8125rem; // role
+    --fs-700: 0.9375rem; // duration medium
+    --fs-600: 0.8125rem; // tablet bold
+    --fs-500: 0.6875rem; // pill bold
+
+    --t-0: 1.16px; //  level and duration
+  }
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--ff-serif);
+  margin: 0 auto;
+}
