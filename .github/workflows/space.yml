@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: /static-Job-listing
+      NEXT_PUBLIC_BASE_PATH: /static-job-listing
 
     strategy:
       matrix:
