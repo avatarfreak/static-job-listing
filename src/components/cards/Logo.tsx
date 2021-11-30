@@ -9,6 +9,7 @@ const Logo: React.FC<Props> = ({ logo, alt }) => {
   return (
     <div className="absolute top-0 left-0 -mt-6 ml-5 md:relative md:mt-0 md:min-w-max">
       <img
+        aria-hidden="true"
         src={logo}
         width="88"
         height="88"
