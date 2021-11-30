@@ -1,41 +1,43 @@
-import useBackgroundImage from "components/hook/useBackgroundImage";
-import Head from "next/head";
+import React from "react";
+import Card from "components/cards";
+import { FilterTags } from "components/filterTag";
+import { useJobSearch } from "hook/useJobSearch";
 
 const Home = () => {
-   // setting Background image
-   useBackgroundImage('home')
+  const { jobs } = useJobSearch();
 
-   return (
-      <>
-         <Head>
-            <meta name="description" content="Experience the outer space." />
-            <title>Home</title>
-         </Head>
+  return (
+    <main className="px-6 m-auto md:px-20 lg:px-40 max-w-[90rem]">
+      {/* --- Header FilterTag ---*/}
+      <div className="-mt-8 px-4">
+        <FilterTags />
+      </div>
 
-         <main className="text-center mx-auto md:mt-md-clamp lg:w-full lg:mt-lg-clamp lg:grid lg:grid-cols-lg-home">
-            <article className="lg:col-start-2 lg:col-span-1 lg:text-left">
-               {/*--- Title ---*/}
-               <h1 className="uppercase font-sans-cond text-fs-900 tracking-[2.7px]">So you want to travel to
-                  <span className="block text-fs-800 text-clr-white">Space</span>
-               </h1>
+      {/* ---Job Details ---*/}
+      <div className="p-6 space-y-16 mt-8 pt-14 md:pt-16 md:py-8 lg:py-[4.5rem]">
+        {jobs.map((job) => {
+          return (
+            <Card
+              key={job.id}
+              logo={job.logo}
+              alt={job.company}
+              company={job.company}
+              news={job.new}
+              feature={job.featured}
+              role={job.role}
+              level={job.level}
+              tools={job.tools}
+              languages={job.languages}
+              contract={job.contract}
+              location={job.location}
+              position={job.position}
+              postedAt={job.postedAt}
+            />
+          );
+        })}
+      </div>
+    </main>
+  );
+};
 
-               {/*--- content ---*/}
-               <p className="font-sans text-fs-400 py-2 px-4 leading-6 max-w-para md:leading-7 lg:px-0">
-                  Let’s face it; if you want to go to space, you might as well genuinely go to
-                  outer space and not hover kind of on the edge of it. Well sit back, and relax
-                  because we’ll give you a truly out of this world experience!
-               </p>
-            </article>
-
-            {/*--- image ---*/}
-            <div className="pt-20 pb-12 lg:col-start-3 col-span-1">
-               <a href="#" className="btn-explore uppercase w-40 h-40 rounded-full bg-white inline-flex items-center justify-center text-fs-300 font-serif text-clr-dark tracking-[1.25px] md:w-60 md:h-60 lg:w-64 lg:h-64">
-                  Explore
-               </a>
-            </div>
-         </main>
-      </>
-   )
-}
-
-export default Home
+export default Home;
