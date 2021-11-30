@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/avatarfreak/frontend-static-job-listing](https://github.com/avatarfreak/frontend-static-job-listing)
-- Live Site URL: [https://avatarfreak.github.io/frontend-static-job-listing/](https://avatarfreak.github.io/frontend-static-job-listing/)
+- Solution URL: [https://github.com/avatarfreak/static-job-listing](https://github.com/avatarfreak/static-job-listing)
+- Live Site URL: [https://avatarfreak.github.io/static-job-listing/](https://avatarfreak.github.io/static-job-listing/)
 
 ## My process
 
