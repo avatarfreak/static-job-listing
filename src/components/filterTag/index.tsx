@@ -16,7 +16,9 @@ const FilterTags = () => {
                 key={idx}
                 className="flex my-2 bg-clr-110 rounded-md text-xs mr-4 tracking-wider overflow-hidden"
               >
-                <h3 className="py-2 px-2">{tag}</h3>
+                <h1 aria-live="polite" className="py-2 px-2">
+                  {tag}
+                </h1>
 
                 <button
                   onClick={() =>
